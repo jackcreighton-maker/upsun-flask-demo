@@ -1,0 +1,12 @@
+# Upsun configuration, generated using AI at: 2026-05-13T11:06:54.794Z
+# AI can make mistakes. Please modify this file to suit your needs.
+applications:
+  app:
+    type: python:3.14
+    hooks:
+      build: |
+        set -ex
+        pip install -r requirements.txt
+    web:
+      commands:
+        start: python app.py
